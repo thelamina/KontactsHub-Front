@@ -1,5 +1,7 @@
-$('input').on('focus',function(){
-		var inputHeight=$('.gdbox input').height();
-    $("html, body").animate({ scrollTop: inputHeight}, 600);
-    return false;
- });
+var x = document.getElementById("myForm");
+x.addEventListener("focus", myMoveFunction, true);
+
+function myMoveFunction() {
+    var elmnt = document.getElementById("starting");
+    elmnt.scrollIntoView({behaviour: "smooth"});  
+}
